@@ -1,0 +1,246 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+:root {
+/*	Primary*/
+	--Darkcyan: hsl(158, 36%, 37%);
+	--Cream: hsl(30, 38%, 92%);
+/*secundary*/
+	--Very-dark-blue: hsl(212, 21%, 14%);
+	--Dark-grayish-blue: hsl(228, 12%, 48%);
+	--White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+	font-family: Montserrat ;
+	src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+	font-weight: 100 1000;
+	font-dsplay: swap;
+}
+
+@font-face {
+	font-family: Fraunces ;
+	src: url(fonts/Fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf);
+	font-weight: 100 1000;
+	font-dsplay: swap;
+}
+
+
+
+body{
+	font-family:Montserrat;
+	background-color: var(--Cream);
+}
+
+
+.description-section {
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    row-gap: 15px;
+    background-color: var(--White);
+    border-radius: 0 6px 6px 0;
+}
+
+
+.description-section button {
+    margin-top: 7px;
+    width: 187px;
+    height: 37px;
+    border-style: none;
+    border-radius: 6px;
+    background-color: var(--Darkcyan);
+    color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 0.7em;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.description-section button:hover {
+	background-color: #184131;
+}
+
+
+.description-section img {
+    width: 12px;
+    height: auto;
+}
+
+.image-container {
+    background: url("images/image-product-desktop.jpg") no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 840px;
+    height: auto;
+    border-radius: 6px 0 0 6px;
+}
+
+.price {
+    margin-top: 6px;
+    font-size: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 17px;
+    color: var(--Darkcyan);
+    font-weight: 900;
+    font-family: Fraunces;
+}
+
+.price span {
+    font-size: 0.41em;
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    text-decoration: line-through
+}
+
+.product-description {
+    font-family: 'Montserrat';
+    font-size: 0.64em;
+    margin-top: 4px;
+    letter-spacing: 0.45px;
+    font-weight: 500;
+    line-height: 18.3px;
+    color: var(--Very-dark-blue);
+}
+
+.description-section h1 {
+    letter-spacing: 0.44em;
+    font-size: 0.6em;
+}
+
+
+.description-section h2 {
+    font-size: 1.45em;
+    font-family: Fraunces;
+    letter-spacing: 1px;
+    line-height: 26.4px;
+    font-weight: 700;
+    color: var(--Very-dark-blue);
+}
+
+/*.image-container img{
+    width: 240px;
+    height: auto;
+    border-radius: 6px 0 0 6px;
+}*/
+
+
+
+.card-container {
+	display:flex;
+    width: 480px;
+    height: 360px;
+    border-radius: 6px;
+}
+
+.container{
+	width: 100vw;
+	height: 100vh;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.reference-container {
+/*     background: url("design/desktop-design.jpg") no-repeat; */
+    background: url("design/mobile-design.jpg") no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 374px;
+    height: 533px;
+    max-width: 1152px;
+    max-height: 760px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Fraunces;
+}
+
+/*374 × 667*/
+
+/*-----------------------------------------------------------------------*/
+ @media screen and (max-width: 600px) {
+  
+
+.reference-container{
+	width:296px;
+}
+
+.description-section{
+	padding:0;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 271px;
+    height: 491px;
+    border-radius: 6px;
+    align-items: center;
+}
+
+.description-section {
+    row-gap: 0;
+    padding: 19px;
+}
+
+.description-section h2{
+	margin-top:9px;
+	margin-bottom:8px;
+}
+
+.description-section button{
+	    margin-top: 13px;
+    width: 233px;
+}
+
+.price{
+	margin-top:16px;
+}
+
+.image-container {
+    background: url("images/image-product-mobile.jpg") no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 190px;
+    border-radius: 6px 6px 0 0;
+}
+
+
+
+
+}
